@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Nest | Engineering</title>
+    <title>Secure Nest | UX & Product</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@700&family=Fira+Code&display=swap" rel="stylesheet">
 </head>
@@ -16,58 +16,65 @@
     </nav>
 
     <header class="container" style="padding: 60px 0; text-align: center;">
-        <p style="color: #4facfe; font-weight: bold; letter-spacing: 2px;">FULL STACK DEVELOPMENT</p>
+        <p style="color: #4facfe; font-weight: bold; letter-spacing: 2px;">PRODUCT STRATEGY & UX</p>
         <h1 style="font-size: 3rem; margin-top: 10px; font-family: 'Playfair Display', serif;">Secure Nest Platform</h1>
         <p style="color: #aaa; max-width: 600px; margin: 20px auto;">
-            Overview: A residential security solution built with Flutter and the MERN stack, featuring AI surveillance integration.
+            Designing a user-centric security solution. From User Flow to Technical Implementation.
         </p>
     </header>
 
     <div class="container">
-        <img src="assets/secure-nest.png" alt="App UI Design" style="width: 100%; border-radius: 8px; margin-bottom: 50px;">
+        <img src="assets/secure-nest.png" alt="App UI Design" style="width: 100%; border-radius: 8px; margin-bottom: 30px;">
+        
+        <div style="background: #222; padding: 30px; border-radius: 8px; display: flex; justify-content: space-around; flex-wrap: wrap; margin-bottom: 50px;">
+            <div style="text-align: center; margin: 10px;">
+                <h3 style="color: #4facfe; font-size: 2rem; margin-bottom: 5px;">Real-Time</h3>
+                <p style="color: #ccc; font-size: 0.9rem;">Alert System</p>
+            </div>
+            <div style="text-align: center; margin: 10px;">
+                <h3 style="color: #4facfe; font-size: 2rem; margin-bottom: 5px;">Mobile First</h3>
+                <p style="color: #ccc; font-size: 0.9rem;">UX Design</p>
+            </div>
+            <div style="text-align: center; margin: 10px;">
+                <h3 style="color: #4facfe; font-size: 2rem; margin-bottom: 5px;">AI Integrated</h3>
+                <p style="color: #ccc; font-size: 0.9rem;">Surveillance</p>
+            </div>
+        </div>
     </div>
 
     <section class="container" style="max-width: 800px; padding-bottom: 100px;">
-        
-        <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 20px;">Technical Architecture</h2>
+        <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 20px;">The User Problem</h2>
         <p style="color: #ccc; margin-bottom: 40px; line-height: 1.8;">
-            I collaborated with the engineering team to build a scalable architecture. We used <strong>Flutter</strong> for a cross-platform mobile experience and <strong>Node.js/Express</strong> for a robust backend API. The system processes real-time alerts from AI surveillance cameras.
+            Residential security apps are often clunky and slow. Our target users (homeowners) needed a system that could deliver "Peace of Mind" instantly. The challenge was designing an interface that made complex AI data simple and actionable in an emergency.
         </p>
 
-        <h3 style="color: #fff; margin-bottom: 20px;">Frontend Implementation (Flutter)</h3>
+        <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 20px;">UX & Technical Solution</h2>
+        <p style="color: #ccc; margin-bottom: 40px; line-height: 1.8;">
+            I prioritized a "Red Alert" hierarchy in the UI, ensuring critical warnings stand out immediately. Technically, we used <strong>Flutter</strong> to ensure the app felt native and smooth on both iOS and Android.
+        </p>
+
+        <h3 style="color: #fff; margin-bottom: 20px;">Bridging Design & Code</h3>
+        <p style="color: #aaa; margin-bottom: 10px; font-size: 0.9rem;">I translated the UI Figma components directly into reusable Flutter widgets:</p>
         <div style="background: #1e1e1e; padding: 20px; border-radius: 8px; margin-bottom: 40px; border: 1px solid #333;">
             <pre style="color: #d4d4d4; font-family: 'Fira Code', monospace; font-size: 0.9rem; overflow-x: auto;">
+// The Alert Widget designed for high visibility
 class SecurityAlert extends StatelessWidget {
   final String alertType;
-  final DateTime timestamp;
-
-  const SecurityAlert({required this.alertType, required this.timestamp});
-
+  
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: alertType == 'Critical' ? Colors.redAccent : Colors.blueGrey,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Text('Alert: $alertType at ${timestamp.toString()}'),
+      color: alertType == 'Critical' ? Colors.red : Colors.grey,
+      child: Text('Urgent: Motion Detected'),
     );
   }
 }
             </pre>
         </div>
-
-        <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 20px;">My Contribution</h2>
-        <p style="color: #ccc; margin-bottom: 40px; line-height: 1.8;">
-            I was responsible for bridging the gap between the UI design (Figma) and the functional code. I implemented the frontend widgets for the dashboard and ensured smooth API integration for the alert notification system.
-        </p>
-
     </section>
 
     <footer style="text-align: center; padding: 40px; border-top: 1px solid #222;">
         <p style="color: #666;">&copy; Hassan Ali</p>
     </footer>
-
 </body>
 </html>
