@@ -251,3 +251,73 @@ h2 {
     .project-image { width: 100%; height: 250px; }
     .gallery-grid { grid-template-columns: 1fr; }
 }
+/* PLAYGROUND SECTION */
+.playground {
+    padding: 80px 0;
+    background-color: #0f0f0f; /* Slightly lighter than main background */
+}
+
+.misc-grid {
+    display: grid;
+    /* This automatically arranges boxes based on screen size */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
+}
+
+.misc-card {
+    position: relative;
+    height: 300px; /* Fixed height for uniformity */
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Now targets both Images AND Videos */
+.misc-card img, 
+.misc-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video fills the square without stretching */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effect for both */
+.misc-card:hover img,
+.misc-card:hover video {
+    transform: scale(1.1);
+}
+/* Hover Effect: Zoom Image */
+.misc-card:hover img {
+    transform: scale(1.1);
+}
+
+/* The Dark Overlay on Hover */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark see-through layer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+.misc-card:hover .overlay {
+    opacity: 1; /* Show on hover */
+}
+
+.overlay span {
+    color: #fff;
+    font-weight: 700;
+    border: 1px solid #4facfe;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+}
